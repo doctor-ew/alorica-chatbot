@@ -1,8 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Alorica Chatbot Monorepo
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This monorepo contains both the frontend and backend for the Alorica Chatbot application. The frontend is built with Next.js and provides a user interface for interacting with the chatbot. The backend, developed in Python, handles Dialogflow interactions on Google Cloud Platform (GCP) for the chatbot.
+
+## Repository Structure
+
+- `frontend/`: Next.js application for the chatbot UI.
+- `backend/`: Python scripts and Flask application for Dialogflow chatbot on GCP.
+
+## Frontend (Next.js)
+
+### Getting Started
+
+To run the frontend development server:
 
 ```bash
 npm run dev
@@ -14,27 +25,71 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the application.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Edit `pages/index.tsx` to modify the homepage. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+API routes can be found in `pages/api`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Learn More
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Learn Next.js](https://nextjs.org/learn)
+- [Next.js GitHub repository](https://github.com/vercel/next.js/)
+- [Next.js Deployment](https://nextjs.org/docs/deployment)
 
-## Learn More
+### Deploy on Vercel
 
-To learn more about Next.js, take a look at the following resources:
+[Deploy with Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Backend (Python and Dialogflow on GCP)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Overview
 
-## Deploy on Vercel
+Backend components handle chatbot logic, including processing Alorica's website content and creating Dialogflow intents.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Setup and Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+#### Prerequisites
+
+- Google Cloud Platform account
+- Python 3.x
+
+#### Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+#### Configuration
+
+Set up Google Cloud credentials and permissions for Dialogflow API and Cloud Storage. Update configurations as needed.
+
+#### Scripts
+
+- `xml-to-csv.py`: Convert XML sitemap to CSV.
+- `csv_cleaner.py`: Clean and preprocess CSV.
+- `csv_processor.py`: Prepare data for Dialogflow.
+- `intent_creator.py`: Create/update Dialogflow intents.
+
+#### Deploying the Chatbot
+
+Deploy `main.py` as a Google Cloud Function. Link and configure the Dialogflow agent.
+
+### Usage
+
+Interact with the deployed chatbot through Alorica's website or other integrated platforms.
+
+### Contributing
+
+Contributions are welcome. Please follow GitHub procedures for forking, changes, and pull requests.
+
+## General Contributions
+
+For contributions to either the frontend or backend, please follow the standard GitHub workflow:
+
+1. Fork the repository.
+2. Create a new branch for your feature.
+3. Commit your changes.
+4. Push to your branch.
+5. Open a pull request.

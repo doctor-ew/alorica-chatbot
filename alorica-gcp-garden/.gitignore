@@ -1,0 +1,16 @@
+# Backend-specific files to ignore
+
+# Ignore the virtual environment directory
+venv/
+
+# Compiled Python files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
