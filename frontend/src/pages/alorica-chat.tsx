@@ -1,8 +1,5 @@
 // types/index.ts
-export interface Message {
-	type: 'user' | 'bot';
-	text: string;
-}
+
 
 // Then, in your page file (e.g., src/pages/index.tsx):
 import { useState, FormEvent } from 'react';
